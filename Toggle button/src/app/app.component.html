@@ -1,0 +1,73 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand text-danger fw-bold">PoolCarz</a>
+    <form class="d-flex">
+      <button class="btn btn-outline-danger fw-bold" type="submit">LogOut</button>
+    </form>
+  </div>
+</nav>
+<div class="container d-flex justify-content-center align-items-center vh-100">
+<div class="card border-2 border-primary" style="width: 50rem; height: auto">
+  <h5 class="card-title bg-primary text-light p-2">Book a Ride</h5>
+
+  <div class="card-body ">
+    <p class="card-text">Pool Carz is an online application which enables users to share rides with others. You can either book a ride or offer a ride. Did we mention that this app is advertisement free? To add on top of that it's free of cost ! So what are you wating for ? check out the rides available and start PCing</p>
+    <div class="d-flex justify-content-center pt-4">
+      <button class="btn btn-primary button" (click)="toggleContent()" *ngIf = !isContentVisible>Show all rides</button>
+    </div>
+    <div *ngIf = "isContentVisible">
+      <div class="d-flex justify-content-center">
+        <div class="buttons">
+          <a href="#" class="btn btn-primary m-1" (click)="toggleContent()">Show All rides</a>
+        </div>
+        <div class="d-flex justify-content-center">
+          <a href="#" class="btn btn-primary m-1">To office</a>
+        </div>
+        <div class="d-flex justify-content-center">
+          <a href="#" class="btn btn-primary m-1">From office</a>
+        </div>
+        <div class="d-flex justify-content-center">
+          <a href="#" class="btn btn-primary m-1">Others</a>
+        </div>
+        </div>
+      <div>
+        <p class="text-center p-4 text-primary">Please select a ride!</p>
+      </div>
+      <table class="table table-bordered text-center tableHover">
+          <tr>
+            <th class="bg-primary text-light">Start point</th>
+            <th class="bg-primary text-light">End point</th>
+            <th class="bg-primary text-light">Seats available</th>
+          </tr>
+        <tbody>
+          <tr>
+            <td>Junction</td>
+            <td>Office</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>PTP</td>
+            <td>Office</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Office</td>
+            <td>East-Fort</td>
+            <td>7</td>
+          </tr>
+        </tbody>
+      </table>
+      <style>
+        .tableHover tbody tr:hover {
+            background-color: aqua;
+            color: white;
+        }
+        </style>
+        
+    </div>
+    <div class="d-flex justify-content-center pt-4">
+      <a href="#" class="btn btn-primary">Offer a ride</a>
+    </div>
+  </div>
+</div>
+</div>
